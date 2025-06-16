@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Login container */
+.login-form {
+  max-width: 400px;
+  margin: 120px auto;
+  background-color: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  color: black;
+}
+
+/* Input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0 20px 0;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  color: #000;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Button */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Center text */
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-form label {
+  font-weight: bold;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .login-form {
+    margin: 80px 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="login-form">
+  <h2>Login</h2>
+  <form action="/login_action.php" method="post">
+    <label for="username">Email or Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter your email or username" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+    <label>
+      <input type="checkbox" name="remember"> Remember me
+    </label>
+
+    <button type="submit">Login</button>
+
+    <p style="text-align:center; margin-top: 20px;">
+      Don't have an account? <a href="signup.html" style="color:dodgerblue;">Sign up</a>
+    </p>
+  </form>
+</div>
+
+</body>
+</html>
